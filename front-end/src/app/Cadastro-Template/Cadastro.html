@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Cadastro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="Login-Form">
+        <div class="container">
+            <div class="main-div">
+                <div class="texto-header">
+                    <h2>Cadastro de Usuário</h2>
+                    <p>Crie seu usuário no sistema.</p>
+                </div>
+
+                <form method="post" th:object="${usuario}" action="salvarUsuario">
+                    <div class="form-group">
+                        <input typer="email" class="form-control" placeholde="username">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="username" class="form-control" placeholde="username">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholde="insira sua senha">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="button" class="btn btn-info">Voltar</button>
+
+                </form>
+            </div>
+</body>
